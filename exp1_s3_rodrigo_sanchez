@@ -1,0 +1,182 @@
+package exp1_s3_rodrigo_sanchez;
+
+import java.util.Scanner; // Importando clase Scanner para leer la entrada de los usuarios
+
+
+
+
+
+// Se utilizará estrategia de control de datos y modularización para gestion de ventas del teatro
+
+public class Exp1_S3_Rodrigo_Sanchez {
+
+
+
+  
+
+  public static void main(String[] args) {
+
+    
+
+     
+
+   // Definicion de variables
+
+     
+
+   String seccion;
+
+   double tarifa;
+
+   String tipoCliente;
+
+   double total;
+
+    
+
+    Scanner scanner = new Scanner(System.in);
+
+    
+
+     
+
+    // Mensaje de bienvenida
+
+     
+
+    System.out.println("Bienvenido al sistema de gestion de ventas de entrada del Teatro Moro");
+
+
+
+     
+
+    //Solicitar tipo de cliente al usuario
+
+     
+
+    System.out.println("Ingrese el tipo de cliente ( E para Estudiante o PG para Publico General)");
+
+    tipoCliente = scanner.nextLine();
+
+     
+
+    // Solicitar al usuario el tipo de seccion
+
+     
+
+    System.out.println("Ingrese la seccion de la entrada (V para VIP, B para Platea Baja, A para Platea Alta, O para Palcos):");
+
+    seccion = scanner.nextLine();
+
+     
+
+    // Calrcular la tarifa
+
+     
+
+    if (tipoCliente.equals("E")) {
+
+      if (seccion.equals("V")){
+
+        tarifa = 13000;
+
+      } else if (seccion.equals("B")) {
+
+        tarifa = 10000;
+
+      } else if (seccion.equals("A")) {
+
+        tarifa = 9000;
+
+      } else if (seccion.equals("PA")){
+
+        tarifa = 6500;
+
+      } else {
+
+        System.out.println("Sección Invalida, intenta nuevamente");
+
+        return;
+
+      }
+
+    } else if (tipoCliente.equals("PG")) {
+
+      if (seccion.equals("V")){
+
+        tarifa = 25500;
+
+      } else if (seccion.equals("B")) {
+
+        tarifa = 19000;
+
+      } else if (seccion.equals("A")) {
+
+        tarifa = 11000;
+
+      } else if (seccion.equals("PA")){
+
+        tarifa = 7200;
+
+      } else {
+
+        System.out.println("Sección Invalida, intenta nuevamente");
+
+        return;
+
+      }
+
+    } else {
+
+      System.out.println("Tipo de cliente inválido, intente nuevamente");
+
+      return;
+
+    }
+
+     
+
+    // Calcular total
+
+     
+
+    total = tarifa;
+
+     
+
+    //Mostrando el total al usuario
+
+     
+
+    System.out.println("El total a pagar es: " + total);
+
+
+
+
+
+
+
+     
+
+    //Mostrando mensaje final
+
+     
+
+    System.out.println("Gracias por su compra, disfrute la funcion");
+
+     
+
+    // Cerrando scanner
+
+
+
+    scanner.close();
+
+       
+
+  }
+
+   
+
+}
+
